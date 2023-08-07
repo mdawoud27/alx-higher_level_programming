@@ -2,4 +2,5 @@ main*
 push
 execute
 q
+__pycache__
 
