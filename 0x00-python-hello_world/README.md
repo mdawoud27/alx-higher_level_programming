@@ -1,5 +1,7 @@
 ## 0x00. Python - Hello, World
 
+![Image](../images/48a9fdbd67c84a328a9df9ec8d93b9ac2458ac37721d7d53e51a27fb2bdc5263.jpg)
+
 ### General
 
 - Why Python programming is awesome
