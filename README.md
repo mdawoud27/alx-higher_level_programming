@@ -1,9 +1,11 @@
 # alx-higher_level_programming
 
-<div style="display: flex; justify-content: space-between;">
-    <h2>GuidoVanRossum</h2>
-    <img src="images/GuidoVanRossum.jpg" style="width: 50%" />
-</div>
+<figure>
+    <img src="GuidoVanRossum.jpg" style="width: 50%" />
+    <figcaption>
+        <em>Guido van Rossum</em>
+    </figcaption>
+</figure>
 
 This repository contains directories for each topic covered in my **High level programming**. Here's a brief overview of each directory:
 - [**0x00-python-hello_world**](https://github.com/mdawoud27/alx-higher_level_programming/tree/main/0x00-python-hello_world): 0x00. Python - Hello, World
