@@ -1,7 +1,7 @@
 # alx-higher_level_programming
 
 <figure>
-    <img src="GuidoVanRossum.jpg" style="width: 50%" />
+    <img src="images/GuidoVanRossum.jpg" style="width: 50%" />
     <figcaption>
         <em>Guido van Rossum</em>
     </figcaption>
