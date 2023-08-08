@@ -2,7 +2,7 @@
 
 <div style="display: flex; justify-content: space-between;">
     <h2>GuidoVanRossum</h2>
-    <img src="GuidoVanRossum.jpg" style="width: 50%" />
+    <img src="images/GuidoVanRossum.jpg" style="width: 50%" />
 </div>
 
 This repository contains directories for each topic covered in my **High level programming**. Here's a brief overview of each directory:
