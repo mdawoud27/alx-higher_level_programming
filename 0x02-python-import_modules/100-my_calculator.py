@@ -3,9 +3,7 @@ if __name__ == '__main__':
     import sys
     import calculator_1 as calc
 
-    
     def switch(a, ope, b):
-
         if ope == '+':
             print(f'{a} + {b} = {calc.add(a, b)}')
         elif ope == '-':
@@ -17,7 +15,6 @@ if __name__ == '__main__':
         else:
             print('Unknown operator. Available operators: +, -, * and /')
             sys.exit(1)
-
 
     argv = sys.argv
     if len(argv) != 4:
