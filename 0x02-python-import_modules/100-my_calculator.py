@@ -13,13 +13,13 @@ if __name__ == '__main__':
         b = int(argv[3])
 
         if ope == '+':
-            print(calc.add(a, b))
+            print(f'{a} + {b} = {calc.add(a, b)}')
         elif ope == '-':
-            print(calc.sub(a, b))
+            print(f'{a} - {b} = {calc.sub(a, b)}')
         elif ope == '*':
-            print(calc.mul(a, b))
+            print(f'{a} * {b} = {calc.mul(a, b)}')
         elif ope == '/':
-            print(calc.div(a, b))
+            print(f'{a} / {b} = {calc.div(a, b)}')
         else:
             print('Unknown operator. Available operators: +, -, * and /')
             sys.exit(1)
