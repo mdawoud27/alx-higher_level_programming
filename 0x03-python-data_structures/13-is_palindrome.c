@@ -9,54 +9,26 @@
  */
 int is_palindrome(listint_t **head)
 {
-	if (*head == NULL || (*head)->next == NULL)
+	listint_t *current = *head, *palin = *head;
+	int counter = 0, i = 0, j = 0;
+
+	if (!*head)
 		return (1);
 
-	/*To get middle of the linked list using 2 pointer techniques*/
-	listint_t *slow, *fast;
-
-	slow = fast = *head;
-
-	while (fast->next && fast->next->next)
+	while (current)
 	{
-		slow = slow->next;
-		fast = fast->next->next;
+		current = current->next;
+		counter++;
 	}
-
-	/*head of the second half of the list*/
-	listint_t *head_sec_half = NULL;
-	listint_t *ptr = slow->next;
-
-	while (ptr)
+	current = *head;
+	for (i = 1; i <= counter; i++)
 	{
-		listint_t *next = ptr->next;
-
-		ptr->next = head_sec_half;
-		head_sec_half = ptr;
-		ptr = next;
-	}
-	/*Compare the first half and the reversed second half*/
-	listint_t *first = *head;
-	listint_t *second = head_sec_half;
-
-	while (second)
-	{
-		if (first->n != second->n)
+		for (j = i; j <= counter - i; j++)
+			palin = palin->next;
+		if (current->n != palin->n)
 			return (0);
-
-		first = first->next;
-		second = second->next;
+		current = current->next;
+		palin = current;
 	}
-	ptr = head_sec_half;
-
-	head_sec_half = NULL;
-	while (ptr)
-	{
-		listint_t *next = ptr->next;
-		ptr->next = head_sec_half;
-		head_sec_half = ptr;
-		ptr = next;
-	}
-	slow->next = head_sec_half;
 	return (1);
 }
