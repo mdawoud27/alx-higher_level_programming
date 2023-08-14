@@ -14,6 +14,7 @@ int is_palindrome(listint_t **head)
 
 	/*To get middle of the linked list using 2 pointer techniques*/
 	listint_t *slow, *fast;
+
 	slow = fast = *head;
 
 	while (fast->next && fast->next->next)
@@ -29,6 +30,7 @@ int is_palindrome(listint_t **head)
 	while (ptr)
 	{
 		listint_t *next = ptr->next;
+
 		ptr->next = head_sec_half;
 		head_sec_half = ptr;
 		ptr = next;
