@@ -9,26 +9,41 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *current = *head, *palin = *head;
-	int counter = 0, i = 0, j = 0;
-
 	if (!*head)
 		return (1);
 
-	while (current)
+	/*To get middle of the linked list using 2 pointer techniques*/
+	listint_t *slow, *fast;
+	slow = fast = *head;
+
+	while (fast->next && fast->next->next)
 	{
-		current = current->next;
-		counter++;
+		slow = slow->next;
+		fast = fast->next->next;
 	}
-	current = *head;
-	for (i = 1; i <= counter; i++)
+
+	/*head of the second half of the list*/
+	listint_t *head_sec_half = NULL;
+	listint_t *ptr = slow->next;
+
+	while (ptr)
 	{
-		for (j = i; j <= counter - i; j++)
-			palin = palin->next;
-		if (current->n != palin->n)
+		listint_t *next = ptr->next;
+		ptr->next = head_sec_half;
+		head_sec_half = ptr;
+		ptr = next;
+	}
+	/*Compare the first half and the reversed second half*/
+	listint_t *first = *head;
+	listint_t *second = head_sec_half;
+
+	while (second)
+	{
+		if (first->n != second->n)
 			return (0);
-		current = current->next;
-		palin = current;
+
+		first = first->next;
+		second = second->next;
 	}
 	return (1);
 }
