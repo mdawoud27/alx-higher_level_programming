@@ -23,7 +23,7 @@ int is_palindrome(listint_t **head)
 		fast = fast->next->next;
 	}
 
-	/*Header of the second half list*/
+	/*head of the second half of the list*/
 	listint_t *head_sec_half = NULL;
 	listint_t *ptr = slow->next;
 
@@ -35,7 +35,7 @@ int is_palindrome(listint_t **head)
 		head_sec_half = ptr;
 		ptr = next;
 	}
-	/* Compare the first half and the reversed second half*/
+	/*Compare the first half and the reversed second half*/
 	listint_t *first = *head;
 	listint_t *second = head_sec_half;
 
@@ -47,5 +47,16 @@ int is_palindrome(listint_t **head)
 		first = first->next;
 		second = second->next;
 	}
+	ptr = head_sec_half;
+
+	head_sec_half = NULL;
+	while (ptr)
+	{
+		listint_t *next = ptr->next;
+		ptr->next = head_sec_half;
+		head_sec_half = ptr;
+		ptr = next;
+	}
+	slow->next = head_sec_half;
 	return (1);
 }
