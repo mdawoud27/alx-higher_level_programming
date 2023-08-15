@@ -1,6 +1,6 @@
 # alx-higher_level_programming
 
-<figure align=center>
+<figure>
     <img src="images/GuidoVanRossum.jpg" style="width: 50%" />
     <figcaption>
         <em>Guido van Rossum</em>
