@@ -1,0 +1,6 @@
+push
+execute
+*main.py
+__pycache__
+*main.c
+palindrome
