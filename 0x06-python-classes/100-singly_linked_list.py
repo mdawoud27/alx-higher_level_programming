@@ -74,13 +74,9 @@ class SinglyLinkedList:
 
     def __str__(self):
         """Return the string representation."""
-        node_str = ""
+        nodes = []
         ptr = self.__head
-
-        while ptr:
-            node_str += str(ptr.data)
-            if ptr.next_node:
-                node_str += '\n'
+        while ptr is not None:
+            nodes.append(str(ptr.data))
             ptr = ptr.next_node
-
-        return node_str
+        return ('\n'.join(nodes))
