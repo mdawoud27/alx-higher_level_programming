@@ -5,13 +5,18 @@
 
 class Node:
     def __init__(self, data, next_node=None):
-        """Instantiation with data and next_node."""
+        """Instantiation with data and next_node.
+
+        Args:
+            data (int): node data.
+            next_node (Node): new node.
+        """
         self.data = data
         self.next_node = next_node
 
     @property
     def data(self):
-        """Return the data of current node."""
+        """Return the data of the current node."""
         return self.__data
 
     @data.setter
@@ -42,37 +47,40 @@ class Node:
         self.__next_node = value
 
 
-"""Class that defines a singly linked list."""
-
-
 class SinglyLinkedList:
     def __init__(self):
         """Initialize an empty linked list."""
-        self.head = None
+        self.__head = None
 
     def sorted_insert(self, value):
-        """Insert a node in its correct position."""
+        """Insert a node in its correct position.
+
+        Args:
+            value (int): node data to be inserted.
+        """
         new = Node(value)
 
-        if not self.head or value < self.head.data:
-            new.next_node = self.head
-            self.head = new
+        if not self.__head or value < self.__head.data:
+            new.next_node = self.__head
+            self.__head = new
             return
 
-        ptr = self.head
+        ptr = self.__head
         while ptr.next_node and ptr.next_node.data < value:
             ptr = ptr.next_node
 
         new.next_node = ptr.next_node
         ptr.next_node = new
 
-        def __str__(self):
-            """Return the string representation."""
-            node_str = ""
-            ptr = self.head
+    def __str__(self):
+        """Return the string representation."""
+        node_str = ""
+        ptr = self.__head
 
-            while ptr:
-                node_str = node_str + ptr.data + '\n'
-                ptr = ptr.next_node
+        while ptr:
+            node_str += str(ptr.data)
+            if ptr.next_node:
+                node_str += '\n'
+            ptr = ptr.next_node
 
-            return node_str
+        return node_str
