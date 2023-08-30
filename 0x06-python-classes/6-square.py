@@ -12,8 +12,8 @@ class Square:
             size (int): The size of the square.
             position (int, int): The coordinates of the square.
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
