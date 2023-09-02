@@ -1,0 +1,52 @@
+add_integer Function Documentation and Tests
+===========================================
+
+This document provides documentation and doctests for the `add_integer` function.
+
+
+Doctests:
+---------
+Here are some examples demonstrating the usage of the `add_integer` function:
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Pass a as an integer
+    >>> add_integer(1)
+    99
+
+Pass a as a float
+    >>> add_integer(1.5)
+    99
+
+Pass a, b as integers
+    >>> add_integer(1, 2)
+    3
+
+Pass a, b as floats numbers
+    >>> add_integer(1.5, 3.7)
+    4
+
+Pass a as an integer, b as a object
+    >>> add_integer('a')
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+Pass a as an integer, b as a str
+    >>> add_integer(1, 'e')
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+Pass a as a integer, b as a float
+    >>> add_integer(5, 3.4)
+    8
+
+Pass a as a float, b as a integer
+    >>> add_integer(5.2, 100)
+    105
+
+Pass a as a float, b as a str
+    >>> add_integer(1.9, 'e')
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
