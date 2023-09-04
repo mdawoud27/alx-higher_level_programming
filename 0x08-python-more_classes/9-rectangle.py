@@ -67,14 +67,15 @@ class Rectangle:
 
     def __str__(self):
         """Return a string representation of the rectangle."""
+        temp = ""
         if self.__width == 0 or self.__height == 0:
-            return ""
-        rect = []
+            return temp
         for i in range(self.__height):
-            [rect.append(str(self.print_symbol)) for j in range(self.__width)]
+            for j in range(self.__width):
+                temp += str(self.print_symbol)
             if i != self.__height - 1:
-                rect.append("\n")
-        return ("".join(rect))
+                temp += "\n"
+        return temp
 
     def __repr__(self):
         """__repr__ magic function"""
