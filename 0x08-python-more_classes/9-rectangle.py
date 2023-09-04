@@ -66,12 +66,11 @@ class Rectangle:
         return (self.__width + self.__height) * 2
 
     def __str__(self):
-        """__str__ magic function"""
+        """Return a string representation of the rectangle."""
         if self.__width == 0 or self.__height == 0:
             return ""
-        return "\n".join(
-            [str(self.print_symbol) * self.__width] * self.__height
-            )
+        return '\n'.join(
+                [str(self.print_symbol) * self.__width] * self.__height)
 
     def __repr__(self):
         """__repr__ magic function"""
@@ -104,5 +103,5 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """Returns a new Rectangle instance with size"""
+        """Returns a new Rectangle instance with width == height == size"""
         return cls(size, size)
