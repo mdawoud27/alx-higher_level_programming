@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 
 """This is a define of Rectangle"""
@@ -69,7 +68,7 @@ class Rectangle:
             return temp
         for i in range(self.__height):
             for j in range(self.__width):
-                temp += '#'
+                temp += "#"
             if i != self.__height - 1:
-                temp += "\n" 
+                temp += "\n"
         return temp
