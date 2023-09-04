@@ -10,7 +10,8 @@ class Rectangle:
 
         Args:
             width (int): rectangle width
-            height (int): rectangle height"""
+            height (int): rectangle height
+        """
         self.__height = height
         self.__width = width
 
