@@ -15,8 +15,8 @@ class Rectangle:
             width (int): rectangle width
             height (int): rectangle height
         """
-        self.height = height
-        self.width = width
+        self.__height = height
+        self.__width = width
         Rectangle.number_of_instances += 1
 
     @property
@@ -67,15 +67,10 @@ class Rectangle:
 
     def __str__(self):
         """__str__ magic function"""
-        temp = ""
         if self.__width == 0 or self.__height == 0:
-            return temp
-        for i in range(self.__height):
-            for j in range(self.__width):
-                temp += str(self.print_symbol)
-            if i != self.__height - 1:
-                temp += "\n"
-        return temp
+            return ""
+        return "\n".join([str(self.print_symbol) * self.__width] * self.__height)
+
 
     def __repr__(self):
         """__repr__ magic function"""
