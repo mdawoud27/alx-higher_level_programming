@@ -30,3 +30,10 @@ Pass float to the function
     Traceback (most recent call last):
         ...
     TypeError: text must be a string
+
+Pass a str
+	>>> text_indentation("Hello.How are you?")
+	Hello.
+	<BLANKLINE>
+	How are you?
+	<BLANKLINE>
