@@ -4,7 +4,8 @@
 
 def add_integer(a, b=98):
     """Function that adds 2 integers.
-    Args: a (int), b (int): Integer values.
+    Args:
+        a (int), b (int): Integer values.
     """
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
