@@ -1,0 +1,41 @@
+print_square Function Documentation and Tests
+===========================================
+
+This document provides documentation and doctests for the `print_square` function.
+
+
+Doctests:
+---------
+Here are some examples demonstrating the usage of the `print_square` function:
+>>> print_square = __import__('4-print_square').print_square
+
+Pass size as an int > 0
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+Pass size as an int < 0
+    >>> print_square(-4)
+    Traceback (most recent call last):
+        ...
+    ValueError: size must be >= 0
+
+Pass size as a float > 0
+    >>> print_square(4.8)
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+Pass size as an float < 0
+    >>> print_square(-4.2)
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+Pass size as a str
+    >>> print_square("e")
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
