@@ -21,6 +21,9 @@ class TestMaxInteger(unittest.TestCase):
     def test_max_minus(self):
         self.assertEqual(max_integer([-2, -12, 0, -5]), 0)
 
+    def test_one_arg(self):
+        self.assertEqual(max_integer([27]), 27)
+
 
 if __name__ == '__main__':
     unittest.main()
