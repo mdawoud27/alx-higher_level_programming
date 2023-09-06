@@ -42,3 +42,6 @@ Pass str
 	Traceback (most recent call last):
 	...
 	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+	>> matrix_divided([[14, 7], [21, -49], [21, 65]], float('inf'))
+    	[[0.0, 0.0], [0.0, -0.0], [0.0, 0.0]]
