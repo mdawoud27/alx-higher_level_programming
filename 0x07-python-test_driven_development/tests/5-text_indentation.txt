@@ -1,0 +1,32 @@
+text_indentation Function Documentation and Tests
+===========================================
+
+This document provides documentation and doctests for the `text_indentation` function.
+
+
+Doctests:
+---------
+Here are some examples demonstrating the usage of the `text_indentation` function:
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Pass nothing
+    >>> text_indentation()
+    Traceback (most recent call last):
+        ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Pass empty string
+    >>> text_indentation("")
+
+
+Pass int to the function
+    >>> text_indentation(12)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+Pass float to the function
+    >>> text_indentation(3.22)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
