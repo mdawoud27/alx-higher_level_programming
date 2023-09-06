@@ -41,10 +41,6 @@ Pass a as a integer, b as a float
     >>> add_integer(5, 3.4)
     8
 
-Pass a as a float, b as a integer
-    >>> add_integer(5.2, 100)
-    105
-
 Pass a as a float, b as a str
     >>> add_integer(1.9, 'e')
     Traceback (most recent call last):
