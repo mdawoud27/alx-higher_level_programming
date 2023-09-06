@@ -46,3 +46,9 @@ Pass a as a float, b as a str
     Traceback (most recent call last):
         ...
     TypeError: b must be an integer
+
+Pass empty args
+    >>> add_integer()
+    Traceback (most recent call last):
+        ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
