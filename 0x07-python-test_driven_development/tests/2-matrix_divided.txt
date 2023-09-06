@@ -7,7 +7,6 @@ This document provides documentation and doctests for the `matrix_divided` funct
 Doctests:
 ---------
 Here are some examples demonstrating the usage of the `matrix_divided` function:
->>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
 Pass matrix and div = 0
     >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
@@ -26,7 +25,7 @@ Pass str
         ...
     TypeError: Each row of the matrix must have the same size
 
-    >>> matrix_divided([[1, 3], [4, 5]], 'e')
+    >>> matrix_divided([[1, 2, 3], [4, 5]], 'e')
     Traceback (most recent call last):
         ...
     TypeError: div must be a number
@@ -38,3 +37,8 @@ Pass str
     Traceback (most recent call last):
         ...
     TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+	>>> matrix_divided([[1, "hello", 3], [4, "Hi", 6, 4]], 2)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
