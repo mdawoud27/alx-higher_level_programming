@@ -52,3 +52,20 @@ Pass empty args
     Traceback (most recent call last):
         ...
     TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Pass None object
+	>>> add_integer(None)
+	Traceback (most recent call last):
+	   ...
+	TypeError: a must be an integer
+
+Test overflow
+	>>> add_integer(2, float('inf'))
+	Traceback (most recent call last):
+	   ...
+	OverflowError: cannot convert float infinity to integer
+
+	>>> add_integer(2, float('nan'))
+	Traceback (most recent call last):
+	   ...
+	ValueError: cannot convert float NaN to integer
