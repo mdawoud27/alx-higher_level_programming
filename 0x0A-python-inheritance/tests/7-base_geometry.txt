@@ -54,3 +54,9 @@ Here are some examples demonstrating the usage of the `integer_validator` functi
     Traceback (most recent call last):
         ...
     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("my_int", True)
+    Traceback (most recent call last):
+        ...
+    TypeError: my_int must be an integer
