@@ -28,3 +28,13 @@ Here are some examples demonstrating the usage of the `print_sorted` function:
     >>> my_list = MyList()
     >>> my_list.print_sorted()
     []
+
+    >>> my_list = MyList()
+    >>> my_list.append('d')
+    >>> my_list.append('a')
+    >>> my_list.append('w')
+    >>> my_list.append('o')
+    >>> my_list.append('u')
+    >>> my_list += ['d']
+    >>> my_list.print_sorted()
+    ['a', 'd', 'd', 'o', 'u', 'w']
