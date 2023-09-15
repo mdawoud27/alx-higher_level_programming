@@ -13,3 +13,18 @@ class Square(Rectangle):
     def __str__(self):
         """__str__ magic function."""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
+
+    @property
+    def size(self):
+        """Return the size of the square."""
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """Set the size value of the square.
+
+        Args:
+            value (int): new size value.
+        """
+        self.width = value
+        self.height = value
