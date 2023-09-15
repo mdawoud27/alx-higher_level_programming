@@ -28,3 +28,25 @@ class Square(Rectangle):
         """
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """Function that assidn attrs.
+
+        Args:
+            args (tuple): args.
+            kwargs (dictionary): dictionary.
+        """
+        if args:
+            for i in range(len(args)):
+                if i == 0:
+                    self.id = args[i]
+                elif i == 1:
+                    self.size = args[i]
+                elif i == 2:
+                    self.x = args[i]
+                elif i == 3:
+                    self.y = args[i]
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
