@@ -95,7 +95,7 @@ class Rectangle(Base):
     def area(self):
         """Return the area of rectangle."""
         return self.__height * self.__width
-    
+
     def display(self):
         """Function that prints the rectangle."""
         [print() for y in range(self.__y)]
@@ -108,3 +108,17 @@ class Rectangle(Base):
     def __str__(self):
         """Prints in specific formate."""
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+
+    def update(self, *args):
+        """Function that assigns an argument to each attribute."""
+        for i in range(len(args)):
+            if i == 0:
+                self.id = args[i]
+            elif i == 1:
+                self.__width = args[i]
+            elif i == 2:
+                self.__height = args[i]
+            elif i == 3:
+                self.__x = args[i]
+            elif i == 4:
+                self.__y = args[i]
