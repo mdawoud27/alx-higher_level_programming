@@ -107,7 +107,9 @@ class Rectangle(Base):
 
     def __str__(self):
         """Prints in specific formate."""
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        sf_w = self.__width
+        sf_h = self.__height
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {sf_w}/{sf_h}"
 
     def update(self, *args, **kwargs):
         """Function that assigns an argument to each attribute."""
@@ -126,3 +128,13 @@ class Rectangle(Base):
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Function  that returns the dictionary representation of a Rectangle"""
+        return {
+            'id': self.id,
+            'width': self.__width,
+            'height': self.__height,
+            'x': self.__x,
+            'y': self.__y
+        }
