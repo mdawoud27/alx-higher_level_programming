@@ -59,6 +59,27 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(square.x, 3)
         self.assertEqual(square.y, 1)
 
+    def test_update_with_args(self):
+        """test update method arguments"""
+        square = Square(5, 10, 0, 10)
+        square.update(1, 2, 3, 4)
+        self.assertEqual(1, square.id)
+        self.assertEqual(2, square.size)
+        self.assertEqual(3, square.x)
+        self.assertEqual(4, square.y)
+
+    def test_update_with_args_kwargs(self):
+        """test update method args kwargs in this case we have to use args"""
+        square = Square(5, 10, 0, 10)
+
+        # case 1 using real attr
+        square.update(1, id=2)
+        self.assertEqual(1, square.id)
+
+        # case 2 using fake attr
+        square.update(1, emad=2)
+        self.assertEqual(1, square.id)
+
 
 if __name__ == '__main__':
     unittest.main()
