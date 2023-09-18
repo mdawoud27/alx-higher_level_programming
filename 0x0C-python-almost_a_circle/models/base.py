@@ -6,6 +6,7 @@ import json
 class Base:
     """Base class doc string"""
     __nb_objects = 0
+
     def __init__(self, id=None):
         """Class constractor.
 
@@ -19,14 +20,14 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """Function that returns the JSON string representation of list_dictionaries"""
+        """Function that returns the JSON string"""
         if list_dictionaries is None:
             return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """Function that writes the JSON string representation of list_objs to a file"""
+        """Function that writes the JSON string"""
         file_name = f'{cls.__name__}.json'
         with open(file_name, 'w') as fn:
             if list_objs is None:
@@ -36,7 +37,7 @@ class Base:
                 fn.write(Base.to_json_string(obj_dicts))
 
     def from_json_string(json_string):
-        """Function that returns the list of the JSON string representation json_string
+        """Function that returns the list of the JSON string
 
         Args:
             json_string (str): string representing a list of dictionaries.
@@ -48,9 +49,10 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """Function that returns an instance with all attrs already set.
-        
+
         Args:
-            dictionary (dict): can be thought of as a double pointer to a dictionary
+            dictionary (dict): can be thought of as
+            a double pointer to a dictionary
         """
         if dictionary and dictionary != {}:
             if cls.__name__ == "Rectangle":
