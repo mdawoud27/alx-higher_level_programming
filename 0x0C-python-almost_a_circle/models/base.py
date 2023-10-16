@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Base class"""
 import json
+from turtle import Turtle
 
 
 class Base:
@@ -75,3 +76,21 @@ class Base:
                 return instances
         except Exception:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """Function that opens a window and
+        draws all the Rectangles and Squares
+        """
+        tim = Turtle()
+        for rect in list_rectangles:
+            for _ in range(2):
+                tim.forward(rect.width)
+                tim.left(90)
+                tim.forward(rect.height)
+                tim.left(90)
+        for square in list_squares:
+            for _ in range(4):
+                tim.forward(square.size)
+                tim.left(90)
+
