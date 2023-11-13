@@ -13,6 +13,6 @@ if (array.length <= 1) {
   console.log(0);
 } else {
   const uniqueNumbers = [...new Set(array)];
-  uniqueNumbers.sort().reverse();
+  uniqueNumbers.sort((a, b) => a - b).reverse();
   console.log(uniqueNumbers[1]);
 }
