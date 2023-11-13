@@ -12,7 +12,7 @@ for (const i of argv) {
 if (array.length <= 1) {
   console.log(0);
 } else {
-  array.sort().reverse();
-  // console.log(array);
-  console.log(array[1]);
+  const uniqueNumbers = [...new Set(array)];
+  uniqueNumbers.sort().reverse();
+  console.log(uniqueNumbers[1]);
 }
