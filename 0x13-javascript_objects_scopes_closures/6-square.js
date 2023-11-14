@@ -7,11 +7,13 @@ class Square extends baseSquare {
     this.size = size;
   }
 
-  charPrint (c = 'X') {
+  charPrint (c) {
+    const char = c === undefined || c.length > 1 ? 'X' : c;
+
     for (let i = 0; i < this.size; i++) {
       let squRow = '';
       for (let j = 0; j < this.size; j++) {
-        squRow += c;
+        squRow += char;
       }
       console.log(squRow);
     }
