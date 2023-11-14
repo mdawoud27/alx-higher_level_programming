@@ -9,7 +9,7 @@ class Square extends baseSquare {
 
   charPrint (c) {
     let char = '';
-    c === undefined ? char = 'X' : char = c;
+    c == undefined ? char = 'X' : char = c;
 
     for (let i = 0; i < this.size; i++) {
       let squRow = '';
