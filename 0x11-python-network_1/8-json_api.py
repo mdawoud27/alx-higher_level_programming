@@ -20,7 +20,7 @@ if __name__ == '__main__':
     try:
         json_data = response.json()
         if json_data:
-            print(f"[{json_data['id']}] {json_data['name']}")
+            print(f"[{json_data.get('id')}] {json_data.get('name')}")
         else:
             print("No result")
     except (ValueError, Exception):
