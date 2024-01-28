@@ -19,7 +19,7 @@ if __name__ == '__main__':
     cursor = connection.cursor()
     # cursor.execute("SELECT * FROM states")
     # cursor.execute("DELETE FROM states WHERE id > 5")
-    query = "SELECT * FROM states WHERE name = %s"
+    query = "SELECT * FROM states WHERE name = %s ORDER BY id"
     data = (args[4], )
     cursor.execute(query, data)
 
