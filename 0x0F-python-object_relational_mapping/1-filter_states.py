@@ -21,6 +21,5 @@ if __name__ == '__main__':
     for row in query_rows:
         print(row)
 
-    connection.commit()
     cursor.close()
     connection.close()
