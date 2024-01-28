@@ -19,13 +19,12 @@ if __name__ == '__main__':
     cursor = connection.cursor()
     # cursor.execute("SELECT * FROM states")
     # cursor.execute("DELETE FROM states WHERE id > 5")
-    query = "SELECT * FROM states WHERE name = %s ORDER BY id"
-    data = (args[4], )
-    cursor.execute(query, data)
+    query = "SELECT * FROM states WHERE name LIKE BINARY '{}'".format(args[4])
+    cursor.execute(query)
 
     query_rows = cursor.fetchall()
     for row in query_rows:
         print(row)
-    connection.commit()
+    # connection.commit()
     cursor.close()
     connection.close()
