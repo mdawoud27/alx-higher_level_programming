@@ -11,8 +11,8 @@ if __name__ == '__main__':
         host="localhost",
         port=3306,
         user=argvs[1],
-        passwd=argvs[2],
-        db=argvs[3]
+        password=argvs[2],
+        database=argvs[3]
     )
 
     cursor = connection.cursor()
