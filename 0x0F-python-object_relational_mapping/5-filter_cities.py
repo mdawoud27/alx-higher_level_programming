@@ -17,12 +17,15 @@ if __name__ == '__main__':
         database=args[3]
     )
     cursor = connection.cursor()
-    cursor.execute("""SELECT DISTINCT cities.name FROM cities
+    # cursor.execute("SELECT * FROM cities")
+    # cursor.execute("DELETE FROM cities WHERE id > 15")
+    cursor.execute("""SELECT cities.name FROM cities
                       JOIN states ON cities.state_id = states.id
                       WHERE states.name = %s""", (args[4],))
     query_rows = cursor.fetchall()
     for i, row in enumerate(query_rows):
         print(*row, end=', ' if i < len(query_rows) - 1 else '\n')
 
+    # connection.commit()
     cursor.close()
     connection.close()
