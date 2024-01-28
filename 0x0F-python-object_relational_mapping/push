@@ -1,0 +1,5 @@
+#!/bin/bash
+
+git add .
+git commit -m "Adding ${*:1} file"
+git push
