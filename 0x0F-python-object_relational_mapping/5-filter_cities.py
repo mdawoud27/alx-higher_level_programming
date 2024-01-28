@@ -21,11 +21,12 @@ if __name__ == '__main__':
     # cursor.execute("DELETE FROM cities WHERE id > 15")
     cursor.execute("""SELECT cities.name FROM cities
                       JOIN states ON cities.state_id = states.id
-                      WHERE states.name = %s""", (args[4],))
+                      WHERE states.name = %s
+                      ORDER BY cities.id ASC""", (args[4],))
     query_rows = cursor.fetchall()
     for i, row in enumerate(query_rows):
         print(*row, end=', ' if i < len(query_rows) - 1 else '\n')
 
-    # connection.commit()
+    connection.commit()
     cursor.close()
     connection.close()
