@@ -15,7 +15,10 @@ if __name__ == '__main__':
         database=args[3]
     )
     cursor = connection.cursor()
-    query = """SELECT * FROM cities ORDER BY cities.id ASC"""
+    query = """SELECT cities.id, cities.name, states.name FROM cities
+               INNER JOIN states
+               ON cities.id = states.id
+               ORDER BY cities.id ASC"""
     cursor.execute(query)
 
     query_rows = cursor.fetchall()
