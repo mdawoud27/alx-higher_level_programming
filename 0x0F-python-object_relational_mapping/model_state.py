@@ -13,3 +13,7 @@ class State(Base):
     id = Column("id", Integer, primary_key=True,
                 autoincrement=True, nullable=False)
     name = Column("name", String(128), nullable=False)
+
+    def __init__(self, name):
+        """Initialization method"""
+        self.name = name
