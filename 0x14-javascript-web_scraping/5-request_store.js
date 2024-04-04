@@ -7,7 +7,10 @@ const fs = require('fs');
 
 request.get(url, (err, req, body) => {
   if (err) throw err;
-  fs.writeFile(filePath, body, (err) => {
+  fs.open(filePath, 'w', (err) => {
     if (err) throw err;
+    fs.writeFile(filePath, body, (err) => {
+      if (err) throw err;
+    });
   });
 });
