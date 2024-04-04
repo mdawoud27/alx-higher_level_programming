@@ -8,6 +8,6 @@ request.get(
   (err, res, body) => {
     if (err) throw err;
     const movie = JSON.parse(body);
-    console.log(movie['title']);
+    console.log(movie.title);
   }
 );
